@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Opportunities | AquaVerse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/volunteer.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<style>
+    /* Google - Font  */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+        
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Main Page - Volunteer */
+
+.volunteer-main-section {
+    background-image: url('Images/bg.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+    
+.volunteer-main-content {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-out;  
+}
+    
+.volunteer-main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px rgb(0, 0, 0);          
+}
+    
+.volunteer-main-description {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+    
+.volunteer-main-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgb(0, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+        
+.volunteer-main-button:hover {
+    background: transparent;
+    color: #0611eb;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgb(0, 0, 0);
+}
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+/*--------------------------------------------*/
+
+/* Volunteer Opportunities Heading */
+
+.volunteer-section-head {
+    text-align: center;
+    margin: 3rem 0 2rem;
+}
+
+.volunteer-section-head h1 {
+    font-size: 2.5rem;         
+    color: #000000;
+    letter-spacing: 1px;
+}
+/*--------------------------------------------*/
+
+/* Drop down section */
+
+.drop-down-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown {
+    padding: 0.7rem 2.5rem 0.7rem 1rem;
+    border-radius: 25px;
+    border: 1.5px solid #0077b6;
+    font-size: 1.1rem;
+    background: #f8f9fb;
+    color: #0077b6;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,119,182,0.07);
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    min-width: 220px;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    }
+/*--------------------------------------------*/
+
+/* All Programs Opportunities cards */
+.a-programs-section {
+    margin-bottom: 4rem;
+}
+    
+.a-programs-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0077b6;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    letter-spacing: 1px;
+    position: relative;
+    display: block;
+}
+        
+.a-programs-title::after {
+    content: '';
+    display: block;
+    margin: 0.75rem auto 0 auto;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4361ee, #4895ef);
+    border-radius: 2px;
+}
+/*--------------------------------------------*/
+
+/* Volunteer Program Cards */
+
+.programs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-radius: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
+    justify-content: center;
+    margin-left: 0;
+    scroll-snap-type: none;
+    overflow-x: visible;
+}
+    
+.program-card {
+    flex: 0 0 calc(25% - 2rem);
+    max-width: calc(25% - 2rem);
+    background-color: #1417e510;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(7, 42, 156, 0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+        
+.program-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 18px 36px rgba(54, 62, 161, 0.18);
+}
+    
+.card-header {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+    
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+  
+.program-card:hover .card-image {
+    transform: scale(1.05);
+}
+    
+.card-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(193, 193, 193, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: #212529;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+    
+.card-badge img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+    
+.rating-badge {
+position: absolute;
+top: 1rem;
+right: 1rem;
+background: transparent;
+background-color: rgba(193, 193, 193, 0.9);
+padding: 0.5rem;
+border-radius: 50px;
+display: flex;
+align-items: center;
+gap: 0.3rem;
+font-size: 0.8rem;
+font-weight: 600;
+color: #212529;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.rating-badge i {
+color: #ffc107;
+}
+
+.card-body {
+padding: 1.5rem;
+}
+
+.card-title {
+text-align: center;
+font-size: 1rem;
+margin-bottom: 0.5rem;
+color: #212529;
+}
+
+.card-meta {
+color: #ff6a06a2;
+font-weight: bold;
+font-size: 0.7rem;
+margin-bottom: 1rem;
+display: flex;
+gap: 1rem;
+}
+
+.card-meta i {
+font-size: 0.6rem;
+}
+
+.card-description {
+margin-top: 5px;
+margin-bottom: 1.5rem;
+font-size: 0.7rem;
+color: #000000;
+line-height: 1.6;
+}
+
+.card-details {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+margin-bottom: 1.5rem;
+}
+
+.detail-item {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-size: 0.85rem;
+color: #6c757d;
+}
+
+.detail-item i {
+color: #4361ee;
+font-size: 1rem;
+}
+
+.card-footer {
+display: flex;
+justify-content: space-between;
+padding: 0 1.5rem 1.5rem;
+}
+
+.card-btn {
+border: none;
+border-radius: 20px;
+font-size: 0.8rem;
+cursor: pointer;
+transition: all 0.3s ease;
+font-weight: 600;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-btn:active {
+transform: scale(0.97);
+}
+
+.view-btn {
+padding: 1rem 0.9rem;
+background: white;
+border: transparent;
+color: #000000;
+}
+
+.view-btn:hover {
+background-color: #4361ee;
+color: white;
+box-shadow: 0 6px 12px rgba(67, 97, 238, 0.2);
+}
+
+.apply-btn {
+padding: 1rem 0.9rem;
+background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+border: transparent;
+color: white;
+}
+
+.apply-btn:hover {
+background: linear-gradient(135deg, #3a0ca3 0%, #4361ee 100%);
+box-shadow: 0 6px 12px rgba(67, 97, 238, 0.3);
+transform: translateY(-2px);
+}
+
+.apply-btn i {
+transition: transform 0.3s ease;
+}
+
+.apply-btn:hover i {
+transform: translateX(3px);
+
+}
+a{
+text-decoration: none;
+}
+/*--------------------------------------------*/
+/* Overall Rating section & Feedback */
+.feed {
+    background-color: #a9cfe225;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.header h2 {
+    font-size: 2.8rem;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000000;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.left-panel, 
+.right-panel {
+    flex: 1;
+    min-width: 300px;
+    background: transparent;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.left-panel:hover, 
+.right-panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.panel-title {
+    font-size: 1.0rem;
+    color: #000000;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3a06d4;
+}
+
+.rating-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rating-value {
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.stars {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.rating-label {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.reviews-count {
+    font-size: 1.0rem;
+    color: #000000;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #f0f8ff;
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    background: #e1f0fa;
+    transform: scale(1.05);
+}
+
+.stat-value {
+    font-size: 1.0rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #0f0296;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #000000;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #060707;
+    box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.2);
+}
+
+.emoji-rating {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.emoji-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.emoji-option:hover {
+    background: #f0f8ff;
+}
+
+.emoji-option.active {
+    background: #e1f0fa;
+    transform: scale(1.1);
+}
+.emoji-button{
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: #a9cfe211;
+
+}
+
+.emoji {
+    font-size: 1.0rem;
+    margin-bottom: 8px;
+}
+
+.emoji-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-actions .btn {
+    flex: 1;
+}
+
+.btn-secondary {
+    background: #f0f8ff;
+    color: #0a0c0d;
+}
+
+.btn-secondary:hover {
+    background: #e1f0fa;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+.footer-links a {
+    color: #0d0d0d;
+    text-decoration: none;
+    font-weight: 100;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #080b98;
+    text-decoration: underline;
+}
+
+.footer-links a i {
+    margin-right: 8px;
+}
+/* Reviews Section */
+.reviews{
+    background: #f8f9fb;
+    color: #333;
+    padding: 20px;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+.reviews-section {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #0077b6 #f1f1f1;
+}
+.reviews-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0077b6; 
+    font-size: 2.5rem;
+}
+.reviews-scroller {
+    display: inline-flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+.review-card {
+    background: rgba(11, 61, 177, 0.129);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 25px;
+    min-width: 300px;
+    max-width: 350px;
+    white-space: normal;
+    display: inline-block;
+}
+.review-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+}
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #acb0d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+} 
+.review-avatar:hover{
+    transform: translateY(-3px);
+}  
+.review-avatar img {
+height: 52px;
+width: 50px;
+align-items: center;
+border-radius: 50%;
+object-fit: cover;
+}
+.reviewer-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.review-date {
+    color: #777;
+    font-size: 0.8rem;
+}
+.review-rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+.review-text {
+    color: #555;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+.review-seemore {
+    color: #4361ee;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.review-seemore:hover{
+  text-decoration: underline;
+}
+/*--------------------------------------------*/
+
+/* Responsive Design for programs card in mobile view */
+@media (max-width: 1200px) {
+    .program-card {
+        flex: 0 0 calc(33.333% - 2rem);
+        max-width: calc(33.333% - 2rem);
+    }
+}
+
+@media (max-width: 900px) {
+    .program-card {
+        flex: 0 0 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 700px) {
+    .program-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .programs-grid {
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 1rem;
+    }
+}
+/*--------------------------------------------*/
+
+.top-button {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 100;
+}
+
+.top-button a {
+    padding: 12px 25px;
+    background: #0000006f;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.top-button a:hover {
+    background:#000000;
+    color: #0611eb;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+</style>
+<body>
+<!-- Navigation bar - Student 02  -->
+
+ <header id="Home">
+  <nav class="navbar">
+  <div class="nav-container">
+      <div class="nav-logo">
+          <a href="#home">
+              <img src="Images/logo.png" alt="AquaVerse Logo" class="nav-logo-img">
+          </a></div>
+
+  <div class="nav-menu" id="nav-menu">
+      <a href="home.html" class="nav-link">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+      </a>
+      <a href="team.html" class="nav-link">
+          <i class="fas fa-users"></i>
+          <span>Team</span>
+      </a>
+      <a href="table.html" class="nav-link">
+          <i class="fas fa-table"></i>
+          <span>Table</span>
+      </a>
+      <a href="volunteer.html" class="nav-link">
+          <i class="fas fa-hands-helping"></i>
+          <span>Volunteer</span>
+      </a>
+      <a href="sitemap.html" class="nav-link">
+          <i class="fas fa-sitemap"></i>
+          <span>Site Map</span>
+      </a>
+      <a href="feedback.html" class="nav-link">
+          <i class="fas fa-comment-dots"></i>
+          <span>Feedback</span>
+      </a>
+      <a href="profile.html" class="nav-link">
+          <i class="fas fa-user-circle"></i>
+          <span>Profile</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+
+
+<!-- Main Page - Volunteer  -->
+    <section class="volunteer-main-section">
+        <div class="volunteer-main-content">
+            <h2 class="volunteer-main-title">Volunteer</h2>
+            <p class="volunteer-main-description">Join our marine conservation efforts and make a difference in protecting our oceans</p>
+            <a href="#volunteer" class="volunteer-main-button">Explore Opportunities <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+<!-- Volunteer Opportunities Heading -->
+    <div id="volunteer" class="volunteer-section-head">
+        <h1>Volunteer Opportunities</h1>
+    </div>   
+
+<!-- Dropdown-Menu  -->
+    <div class="drop-down-section">
+        <select class="dropdown">
+            <option value="">Most Popular</option>
+            <option value="">Medium Rated</option>
+            <option value="">Least Rated</option>
+        </select>
+    </div>  
+        
+<!-- All Programs Opportunities cards -->
+    <section class="a-programs-section">
+        <h2 class="a-programs-title">All Programs</h2>
+    
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="card-header">
+                    <img src="Images/1st-Card-img.png" alt="Whale Shark Conservation Program" class="card-image">
+                    <div class="card-badge">
+                        <img src="Images/belize.png" alt="Belize Flag">
+                        <span>Belize</span>
+                    </div>
+                    <div class="rating-badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><a href="https://www.volunteerworld.com/en/volunteer-program/whale-shark-conservation-diving-in-belize-placencia">Whale Shark Conservation & Diving</a></h3>
+                    
+                    <p class="card-meta">
+                        <i class="fa-solid fa-star"></i>
+                        Excellent 4.9 (87)
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        $220 Per Week
+                    </p>
+                    <p class="card-description">
+                    Feel the thrill of swimming with a whale shark, the excitement of spearing the invasive lionfish, and the satisfaction in helping protect coral reefs. 🐋</p>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>1 - 8 Weeks</span>
+                        </div>
+                        <br>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-person"></i>
+                            <span>Single | Couples | Group</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Age 16 - 50+</span>
+                        </div>
+                    </div>
+                </div>
+                    <div class="card-footer">
+                    <a href="https://www.volunteerworld.com/en/volunteer-program/whale-shark-conservation-diving-in-belize-placencia" 
+                    class="card-btn view-btn">
+                        <i class="far fa-eye"></i> View Program
+                    </a>
+
+                    <a href="https://www.volunteerworld.com/en/book/whale-shark-conservation-diving-in-belize-placencia?EndDate=2025-08-09T00%3A00%3A00Z&GroupSize=1&StartDate=2025-08-01T00%3A00%3A00Z" 
+                    class="card-btn apply-btn">
+                        Apply Now <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+            
+<!--Volunteer Program Card 2 -->
+
+            <div class="program-card">
+                <div class="card-header">
+                    <img src="Images/Coral-1.png" alt="Coral Reef Regeneration Program" class="card-image">
+                    <div class="card-badge">
+                        <img src="Images/grenada.png" alt="Grenada Flag">
+                        <span>Grenada</span>
+                    </div>
+                    <div class="rating-badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.93</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><a href="https://www.volunteerworld.com/en/volunteer-program/coral-reef-regeneration-assistant-in-grenada-carriacou">Coral Reef Regeneration Assistant</a></h3>
+                    <p class="card-meta">
+                        <i class="fa-solid fa-star"></i>
+                        Perfect 4.82 (10)
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        $334 Per Week
+                    </p>
+                    <p class="card-description">The Caribbean Reef Buddy coral nursery is in its eighth restoration cycle, with a total of over 300 corals out-planted from the nursery.</p>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>2 - 8 Weeks</span>
+                        </div>
+                        <br>
+
+                        <div class="detail-item">
+                            <i class="fa-solid fa-person"></i> 
+                            <span>Single | Couples | Group</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Age 18 - 50+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://www.volunteerworld.com/en/volunteer-program/coral-reef-regeneration-assistant-in-grenada-carriacou" 
+                        class="card-btn view-btn">
+                            <i class="far fa-eye"></i> View Program
+                    </a>
+
+                    <a href="https://www.volunteerworld.com/en/book/coral-reef-regeneration-assistant-in-grenada-carriacou?EndDate=2025-08-14T00%3A00%3A00Z&GroupSize=1&Referrer=JA_3s_FtX-pnxRk-sx-u7MXnRaGQHEUla-0cqCrctNFfTyNgVtLCURcc2I9ijh9z21bXVc_OnMMNFV-aRJqeT5o-KyuhuwuEeZBNwt-pRlgwdhHHlijPwBLMk2MUqwyI6fBvldHJ9Tc%3D&StartDate=2025-08-01T00%3A00%3A00Z" 
+                        class="card-btn apply-btn">
+                            Apply Now <i class="fas fa-paper-plane"></i>
+                    </a>
+
+                </div>
+            </div>
+            
+<!--Volunteer Program Card 3 -->
+
+            <div class="program-card">
+                <div class="card-header">
+                    <img src="Images/2nd-Card-img.png" alt="Turtle Rehabilitation Program" class="card-image">
+                    <div class="card-badge">
+                        <img src="Images/maldives.png" alt="Maldives Flag">
+                        <span>Maldives</span>
+                    </div>
+                    <div class="rating-badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><a href="https://www.volunteerworld.com/en/volunteer-program/turtle-rehabilitation-care-in-sri-lanka-ambalangoda-sri-lanka">Turtle Rehabilitation</a></h3>
+                    <p class="card-meta">
+                        <i class="fa-solid fa-star"></i>
+                        Perfect 4.6 (24)
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        $891 Per Week
+                    </p>
+                    <p class="card-description">Rehabilitate turtles that have been rescued from ghost net entanglement and the illegal pet trade, while educating the Maldives' community about environmental awareness.</p>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>2 - 12 weeks</span>
+                        </div>
+                        <br>
+
+                        <div class="detail-item">
+                            <i class="fa-solid fa-person"></i>                               
+                            <span>Single | Couples | Group</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Age 18 - 50+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://www.volunteerworld.com/en/volunteer-program/turtle-rehabilitation-care-in-sri-lanka-ambalangoda-sri-lanka" 
+                    class="card-btn view-btn">
+                        <i class="far fa-eye"></i> View Program
+                    </a>
+
+                    <a href="https://www.volunteerworld.com/en/book/turtle-rehabilitation-care-in-sri-lanka-ambalangoda-sri-lanka?EndDate=2025-08-14T00%3A00%3A00Z&GroupSize=1&Referrer=HpJ9RgJvtIMbkVPcw_p_wclR_TrMH8DONulE4GMSdJ0IDfIxrXlF0f2r0DFc_YmO7_kH-MoT2OldFLlb2mvHTcEcvhXuUzMh8yBA4QZOHNOgjyyLImg5GjtJgzx8v291EORHRxO4rrTJIII5jCJy&StartDate=2025-08-01T00%3A00%3A00Z" 
+                    class="card-btn apply-btn">
+                        Apply Now <i class="fas fa-paper-plane"></i>
+                    </a>
+
+                </div>
+            </div>
+            
+<!--Volunteer Program Card 4 -->
+
+            <div class="program-card">
+                <div class="card-header">
+                    <img src="Images/4th-Card-img.png" alt="Divemaster Training Program" class="card-image">
+                    <div class="card-badge">
+                        <img src="Images/indonesia.png" alt="Indonesia Flag">
+                        <span>Indonesia</span>
+                    </div>
+                    <div class="rating-badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><a href="https://www.volunteerworld.com/en/volunteer-program/divemaster-marine-biology-training-in-indonesia-klungkung">Divemaster & Marine Training</a></h3>
+                    <p class="card-meta">
+                        <i class="fa-solid fa-star"></i>
+                        Perfect 4.82 (10)
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        $334 Per Week
+                    </p>
+                    <p class="card-description">The program consists of 11 lectures and discussions on varied marine science topics, including an introduction to basic marine ecology, Coral Reefs and Transect Methodology, etc.</p>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>6 - 7 Weeks</span>
+                        </div>
+                        <br>
+
+                        <div class="detail-item">
+                            <i class="fa-solid fa-person"></i>                               
+                            <span>Single | Couples | Group</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Age 18+ - 50+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://www.volunteerworld.com/en/volunteer-program/divemaster-marine-biology-training-in-indonesia-klungkung" 
+                    class="card-btn view-btn">
+                        <i class="far fa-eye"></i> View Program
+                    </a>
+
+                    <a href="https://www.volunteerworld.com/en/book/divemaster-marine-biology-training-in-indonesia-klungkung?EndDate=2025-09-11T00%3A00%3A00Z&GroupSize=1&Referrer=lZssi7NVYQfEzXkutf7UKVVc_pxNymCjyZW7cd4jI9TWkxyV_e4pcUeiEU4OJl638rl1cYvkd9MZsjBke0VNafJCcpkX2Aj4F9Le_3wVWv2sqw6J6OUHz98kTn5MOijeMHDs_YgZtYbr_hI%3D&StartDate=2025-08-01T00%3A00%3A00Z" 
+                    class="card-btn apply-btn">
+                        Apply Now <i class="fas fa-paper-plane"></i>
+                    </a>
+
+                </div>
+            </div>
+            
+<!--Volunteer Program Card 5 -->
+
+            <div class="program-card">
+                <div class="card-header">
+                    <img src="Images/3rd-Card-img.png" alt="Invasive Species Management Program" class="card-image">
+                    <div class="card-badge">
+                        <img src="Images/belize.png" alt="Belize Flag">
+                        <span>Belize</span>
+                    </div>
+                    <div class="rating-badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><a href="https://www.volunteerworld.com/en/volunteer-program/invasive-species-management-in-belize-placencia">Invasive Species Management</a></h3>
+                    <p class="card-meta">
+                        <i class="fa-solid fa-star"></i>
+                        Excellent 4.8 (64)
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        $850 Per Week
+                    </p>
+                    <p class="card-description">Make a difference by removing lionfish, an invasive species decimating reef ecosystems. Learn to dive while culling lionfish.</p>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>1 - 8 Weeks</span>
+                        </div>
+                        <br>
+
+                        <div class="detail-item">
+                            <i class="fa-solid fa-person"></i>                               
+                            <span>Single | Couples | Group</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Age 16 - 55+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://www.volunteerworld.com/en/volunteer-program/invasive-species-management-in-belize-placencia" 
+                    class="card-btn view-btn">
+                        <i class="far fa-eye"></i> View Program
+                    </a>
+
+                    <a href="https://www.volunteerworld.com/en/book/invasive-species-management-in-belize-placencia?EndDate=2025-09-11T00%3A00%3A00Z&GroupSize=1&Referrer=Z6DeXCFDH9SM9iCJ_YdXt795JBDNv0m6yi8vy8gC9dxjuzoAXkr8pYnrTEHLX1FGOAhMhdWT_MXE7JpHDz9LoBn_JuTbYHHqqdPwmHRCSAmIppbF8bc2gjSsFBj4ttO28w%3D%3D&StartDate=2025-08-01T00%3A00%3A00Z" 
+                    class="card-btn apply-btn">
+                        Apply Now <i class="fas fa-paper-plane"></i>
+                    </a>
+
+                </div>
+            </div>
+            
+<!--Volunteer Program Card 6 -->
+
+            <div class="program-card">
+                <div class="card-header">
+                    <img src="Images/Coral-3.png" alt="Coral Restoration Program" class="card-image">
+                    <div class="card-badge">
+                        <img src="Images/thiland.png" alt="Thailand Flag">
+                        <span>Thailand</span>
+                    </div>
+                    <div class="rating-badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.92</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><a href="https://www.volunteerworld.com/en/volunteer-program/marine-conservationist-and-dive-training-in-thailand-koh-tao">Coral Restoration and Marine Conservation</a></h3>
+                    <p class="card-meta">
+                        <i class="fa-solid fa-star"></i>
+                        Perfect 4.92 (5)
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        $720 Per Week
+                    </p>
+                    <p class="card-description">Head out to Thailand and gain internationally recognised scuba diving qualifications whilst helping to protect Koh Tao's abundant and diverse coral reefs!</p>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>4 - 12 Weeks</span>
+                        </div>
+                        <br>
+
+                        <div class="detail-item">
+                            <i class="fa-solid fa-person"></i> 
+                            <span>Single | Couples | Group</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Age 18 - 50+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://www.volunteerworld.com/en/volunteer-program/marine-conservationist-and-dive-training-in-thailand-koh-tao" 
+                    class="card-btn view-btn">
+                        <i class="far fa-eye"></i> View Program
+                    </a>
+
+                    <a href="https://www.volunteerworld.com/en/book/marine-conservationist-and-dive-training-in-thailand-koh-tao?EndDate=2025-10-28T00%3A00%3A00Z&GroupSize=1&Referrer=3bTRw7JLmllZheMXpnXUafW-y-swjoA9Vl9Ecurbmtswvg8jxREr89ws2_adSRtZFi89zheHfjfUFktyc0E2rMxAMM4U9pZfYN718UVXH2Ft6-Rbaam48NOlspC30VSQb54TVglh3NH-jxIxPIA%3D&StartDate=2025-10-01T00%3A00%3A00Z" 
+                    class="card-btn apply-btn">
+                        Apply Now <i class="fas fa-paper-plane"></i>
+                    </a>
+
+                </div>
+            </div>
+            
+<!--Volunteer Program Card 7 -->
+
+            <div class="program-card">
+                <div class="card-header">
+                    <img src="Images/Coral-4.png" alt="Reef Restoration Internship Program" class="card-image">
+                    <div class="card-badge">
+                        <img src="Images/indonesia.png" alt="Indonesia Flag">
+                        <span>Indonesia</span>
+                    </div>
+                    <div class="rating-badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.98</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><a href="https://www.volunteerworld.com/en/volunteer-program/project-laut-reef-restoration-internship">Reef Restoration Internship</a></h3>
+                    <p class="card-meta">
+                        <i class="fa-solid fa-star"></i>
+                        Perfect 4.92 (5)
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        $250 Per Week
+                    </p>
+                    <p class="card-description">Learn to dive responsibly, gain hands-on experience in reef restoration, and contribute to research efforts! Join Project Laut's Reef Restoration Program in Nusa Penida!</p>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>2 - 16 Weeks</span>
+                        </div>
+                        <br>
+
+                        <div class="detail-item">
+                            <i class="fa-solid fa-person"></i> 
+                            <span>Single | Couples | Group</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Age 22 - 50+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://www.volunteerworld.com/en/volunteer-program/project-laut-reef-restoration-internship" 
+                        class="card-btn view-btn">
+                            <i class="far fa-eye"></i> View Program
+                    </a>
+
+                    <a href="https://www.volunteerworld.com/en/book/project-laut-reef-restoration-internship?EndDate=2025-10-28T00%3A00%3A00Z&GroupSize=1&Referrer=JX_LOfzOO_-l1blDv6aFGxHIor-ujnrkknD9D6mV_65m1rbfffxuD_DM1UVdPzLUXAVUo2Ls6KrbfsdqKcPx2q9SPvcNpKiSrGfz0AMCjCic_YsXGrOzLTwO&StartDate=2025-10-01T00%3A00%3A00Z" 
+                        class="card-btn apply-btn">
+                            Apply Now <i class="fas fa-paper-plane"></i>
+                    </a>
+
+                </div>
+            </div>
+            
+<!--Volunteer Program Card 8 -->
+
+            <div class="program-card">
+                <div class="card-header">
+                    <img src="Images/Coral-2.png" alt="Manta Ray Conservation Program" class="card-image">
+                    <div class="card-badge">
+                        <img src="Images/usa.png" alt="USA Flag">
+                        <span>USA</span>
+                    </div>
+                    <div class="rating-badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><a href="https://www.volunteerworld.com/en/volunteer-program/manta-ray-coral-reef-conservation-in-indonesia-arborek-island">Manta Ray & Coral Reef Conservation</a></h3>
+                    <p class="card-meta">
+                        <i class="fa-solid fa-star"></i>
+                        Perfect 4.82 (10)
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        $334 Per Week
+                    </p>
+                    <p class="card-description">This marine conservation program you will use your diving skills to collect essential data on the local coral reef, which comprises 80% of the world's coral reefs.</p>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>2 - 24 Weeks</span>
+                        </div>
+                        <br>
+
+                        <div class="detail-item">
+                            <i class="fa-solid fa-person"></i> 
+                            <span>Single | Couples</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Age 18 - 50+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://www.volunteerworld.com/en/volunteer-program/manta-ray-coral-reef-conservation-in-indonesia-arborek-island" 
+                       class="card-btn view-btn">
+                        <i class="far fa-eye"></i> View Program
+                    </a>
+
+                    <a href="https://www.volunteerworld.com/en/book/manta-ray-coral-reef-conservation-in-indonesia-arborek-island?EndDate=2025-10-28T00%3A00%3A00Z&GroupSize=1&Referrer=2UuAwRBgqNjnIV0xlEYVIRZqeFuyIg7S81tE-o52jkQPkJfVcu-N3qwWgzG6p4YK-Nw2gD35TjVQt2HDVWhrL9X2NBYJptLahIUNBZvIF_WM7UDELxWcFiBxufyDytRs3TCeNQSctajaujJCfX0s&StartDate=2025-10-01T00%3A00%3A00Z" 
+                    class="card-btn apply-btn">
+                    Apply Now <i class="fas fa-paper-plane"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Overall Rating section & Feedback -->
+<section class="feed">
+<div class="container">
+        <div class="header">
+            <h2>Reviews</h2>
+            <p><i>Your feedback helps us protect ocean life more effectively</i></p>
+        </div>
+        
+        <div class="content">
+            <!-- Left Panel -->
+            <div class="left-panel">
+                <h2 class="panel-title">Ratings</h2>
+                
+                <div class="rating-container">
+                    <div class="rating-value">9.4/10</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="rating-label">Exceptional</div>
+                    <div class="reviews-count">26 Verified Reviews</div>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-value">28</div>
+                        <div class="stat-label">Complete Programs</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">08</div>
+                        <div class="stat-label">Ongoing Programs</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">22</div>
+                        <div class="stat-label">Upcoming Programs</div>
+                    </div>
+                </div>
+                
+                <a href="#Review" class="btn">
+                    <i class="fas fa-book-reader"></i> Read all 26 reviews
+                </a>
+            </div>
+            
+            <!-- Right - Rating - Section -->
+            <div class="right-panel">
+                <h2 class="panel-title">Send Us Your Review</h2>
+                
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>How would you rate your experience?</label>
+                    <div class="emoji-rating">
+                        <button type="button" class="emoji-option emoji-button" data-rating="1">
+                        <span class="emoji">😠</span>
+                        <span class="emoji-label">Poor</span>
+                        </button>
+                        <button type="button" class="emoji-option emoji-button" data-rating="2">
+                        <span class="emoji">😐</span>
+                        <span class="emoji-label">Fair</span>
+                        </button>
+                        <button type="button" class="emoji-option emoji-button" data-rating="3">
+                        <span class="emoji">😊</span>
+                        <span class="emoji-label">Good</span>
+                        </button>
+                        <button type="button" class="emoji-option emoji-button" data-rating="4">
+                        <span class="emoji">😄</span>
+                        <span class="emoji-label">Great</span>
+                        </button>
+                        <button type="button" class="emoji-option emoji-button" data-rating="5">
+                        <span class="emoji">😍</span>
+                        <span class="emoji-label">Excellent</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                    
+                    <div class="form-group">
+                        <label for="suggestions">Any suggestions? We'd love to hear what you think. (Optional)</label>
+                        <textarea id="suggestions" class="form-control" placeholder="Share your thoughts with us..."></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn">
+                            <i class="fas fa-paper-plane"></i> Submit Feedback
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-lock"></i> Privacy policy</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> Help Center</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+    <section class="reviews">
+        <div class="reviews-section">
+            <h3 id="Review">Recent Reviews</h3>
+            <div class="reviews-scroller">
+<!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar"><img src="Images/review-1.png" alt="John Doe"></div>
+                        <div>
+                            <div class="reviewer-name">John Doe</div>
+                            <div class="review-date">May 15, 2025</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">Good ★★★☆☆ (3.5)</div>
+                    <p class="review-text">Volunteering here has been an amazing experience. The team is incredibly supportive and the work we do makes a real difference in the community.
+                    <a class="review-seemore" href="#lastreview">See more...</a>
+                    </p>
+                </div>
+
+<!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar"><img src="Images/review-2.png" alt="Alice Smith"></div>
+                        <div>
+                            <div class="reviewer-name">Alice Smith</div>
+                            <div class="review-date">April 2, 2025</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">Perfect ★★★★☆ (4.5)</div>
+                    <p class="review-text">Great organization with meaningful projects. I've learned so much and met wonderful people. Would definitely recommend to anyone looking to volunteer.
+                    <a class="review-seemore" href="#">See more...</a>
+                    </p>
+                </div>
+
+<!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar"><img src="Images/review-3.png" alt="Robert Johnson"></div>
+                        <div>
+                            <div class="reviewer-name">Robert Johnson</div>
+                            <div class="review-date">March 28, 2025</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">Excellent ★★★★★ (5.0)</div>
+                    <p class="review-text">One of the best volunteering experiences I've had. Flexible schedules and the staff really appreciate their volunteers. Will continue supporting!
+                    <a class="review-seemore" href="#">See more...</a>    
+                    </p>
+                </div>
+
+<!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar"><img src="Images/review-4.png" alt="Maria Brown"></div>
+                        <div>
+                            <div class="reviewer-name">Maria Brown</div>
+                            <div class="review-date">February 10, 2025</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">Perfect ★★★★☆ (4.0)</div>
+                    <p class="review-text">I've volunteered with several organizations, but this one stands out. Well-organized, impactful work, and a warm community feeling.
+                    <a class="review-seemore" href="#">See more...</a>
+
+                    </p>
+                </div>
+
+<!-- Review 5 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar"><img src="Images/review-5.png" alt="Thomas Wilson"></div>
+                        <div>
+                            <div class="reviewer-name" id="lastreview">Thomas Wilson</div>
+                            <div class="review-date">January 5, 2025</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">Excellent ★★★★☆ (4.5)</div>
+                    <p class="review-text">Excellent volunteer opportunities for all skill levels. The training provided was thorough and the staff are always available to answer questions.
+                    <a class="review-seemore" href="#">See more...</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <p class="top-button"><a href="#"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
+
+<!-- Footer section - Student 02 -->
+        <footer>
+            <div class="footer-container">
+            <!-- Student Page Editors - LEFT -->
+            <div class="student-editors">
+                <h3>Page Editors</h3>
+                <div class="editor-links">
+                <a href="pageEditor_ST1.html" class="editor-link">Student 1 - B.Vipooshan</a>
+                <a href="pageEditor_ST2.html" class="editor-link">Student 2 - T.Dinojan</a>
+                <a href="pageEditor_ST3.html" class="editor-link">Student 3 - M.N.M.Riyas</a>
+                <a href="pageEditor_ST4.html" class="editor-link">Student 4 - Vishalini.K</a>
+                </div>
+            </div>
+            
+            <!-- Main footer content-->
+            <div class="footer-content">
+                <h2>AquaVerse</h2>
+                <p class="tagline">"Your voice can echo underwater. Join Aquaverse."</p>
+                <p class="description">Make waves with us and become part of the movement to protect our oceans. Together, we can create a sustainable future for marine life and preserve the beauty of our underwater world.</p>
+                <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/zen_coders_x?igsh=MWdoOG92MzdldnMxag==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Page edit by -->
+            <div class="page-credit">
+                <h3>Page Credit</h3>
+                <p>This page was edited by <a href="pageEditor_ST1.html" class="editor-link">B.Vipooshan</a></p>
+            </div>
+            </div>
+            
+            <!-- Copyright section -->
+            <div class="footer-bottom">
+            <p>&copy; 2025 AquaVerse | All Rights Reserved</p>
+            </div>
+        </footer>
+
+</body>
+</html>
